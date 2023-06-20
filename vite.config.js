@@ -7,8 +7,8 @@ export default defineConfig({
   build: {
     lib: {
       entry: path.resolve(__dirname, "src/index.js"),
-      name: "vue3-select-option-searchable",
-      fileName: 'vue3-select-option-searchable',
+      name: "vue3-select-option-search",
+      fileName: 'vue3-select-option-search',
     },
     rollupOptions: {
       external: ["vue"],

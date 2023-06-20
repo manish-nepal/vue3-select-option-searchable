@@ -41,8 +41,8 @@ selected object or item on a variable like this **const selectedItem = ref({})**
 
 ```vue
 
-import SelectOption from 'vue3-select-option-searchable'
-import "vue3-select-option-searchable/dist/style.css"
+import SelectOption from 'vue3-select-option-search'
+import "vue3-select-option-search/dist/style.css"
 
 createApp(App).use(SelectOption).mount('#app')
 
@@ -52,8 +52,8 @@ createApp(App).use(SelectOption).mount('#app')
 
 ```vue
 
-import SelectOption from 'vue3-select-option-searchable'
-import "vue3-select-option-searchable/dist/style.css"
+import SelectOption from 'vue3-select-option-search'
+import "vue3-select-option-search/dist/style.css"
 
 const app = createApp(App);
 

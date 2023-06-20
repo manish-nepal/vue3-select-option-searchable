@@ -1,17 +1,17 @@
 {
-  "name": "vue3-select-option-searchable",
+  "name": "vue3-select-option-search",
   "private": false,
   "version": "0.0.0",
   "type": "module",
   "files": [
     "dist"
   ],
-  "main": "./dist/vue3-select-option-searchable.umd.cjs",
-  "module": "./dist/vue3-select-option-searchable.js",
+  "main": "./dist/vue3-select-option-search.umd.cjs",
+  "module": "./dist/vue3-select-option-search.js",
   "exports": {
     ".": {
-      "import": "./dist/vue3-select-option-searchable.js",
-      "require": "./dist/vue3-select-option-searchable.umd.cjs"
+      "import": "./dist/vue3-select-option-search.js",
+      "require": "./dist/vue3-select-option-search.umd.cjs"
     },
     "./dist/style.css": "./dist/style.css"
   },
@@ -20,18 +20,19 @@
     "vue",
     "vue 3",
     "selecet option",
-    "searchable",
+    "search",
     "clearable"
   ],
   "author": "Manish Nepal",
+  "license": "ISC",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/manish-nepal/vue3-select-option-searchable"
+    "url": "git+https://github.com/manish-nepal/vue3-select-option-search"
   },
   "bugs": {
-    "url": "https://github.com/manish-nepal/vue3-select-option-searchable/issues"
+    "url": "https://github.com/manish-nepal/vue3-select-option-search/issues"
   },
-  "homepage": "https://github.com/manish-nepal/vue3-select-option-searchable#readme",
+  "homepage": "https://github.com/manish-nepal/vue3-select-option-search#readme",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
