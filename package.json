@@ -1,0 +1,33 @@
+{
+  "name": "vue3-select-option-searchable",
+  "private": false,
+  "version": "0.0.0",
+  "type": "module",
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/vue3-select-option-searchable.umd.cjs",
+  "module": "./dist/vue3-select-option-searchable.js",
+  "exports": {
+    ".": {
+      "import": "./dist/vue3-select-option-searchable.js",
+      "require": "./dist/vue3-select-option-searchable.umd.cjs"
+    },
+    "./dist/style.css": "./dist/style.css"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "peerDependencies": {
+    "vue": "^3.2.37"
+  },
+  "dependencies": {
+    "vue": "^3.2.37"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^4.1.0",
+    "vite": "^4.3.9"
+  }
+}
