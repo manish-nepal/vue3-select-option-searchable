@@ -15,6 +15,23 @@
     },
     "./dist/style.css": "./dist/style.css"
   },
+  "description": "Vue 3 select option package, where you should pass an array or array of objects as a prop and returns a selectd item or object.",
+  "keywords": [
+    "vue",
+    "vue 3",
+    "selecet option",
+    "searchable",
+    "clearable"
+  ],
+  "author": "Manish Nepal",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/manish-nepal/vue3-select-option-searchable"
+  },
+  "bugs": {
+    "url": "https://github.com/manish-nepal/vue3-select-option-searchable/issues"
+  },
+  "homepage": "https://github.com/manish-nepal/vue3-select-option-searchable#readme",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
