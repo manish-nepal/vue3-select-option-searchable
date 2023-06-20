@@ -1,13 +1,10 @@
 # Vue 3 select option with search filter
 
 
-![1](https://github.com/manish-nepal/vue3-select-option-searchable/assets/106729542/8793a9b1-ab8a-4ecb-bd44-ef049bfbf8f9)
-
-![2](https://github.com/manish-nepal/vue3-select-option-searchable/assets/106729542/d23bb9bd-7688-41b6-a315-f8e906dfce9e)
-
-![3](https://github.com/manish-nepal/vue3-select-option-searchable/assets/106729542/d750b7be-4bf5-4fd5-884f-61cf3439d0db)
-
-![4](https://github.com/manish-nepal/vue3-select-option-searchable/assets/106729542/6bff0d13-561e-4980-bf09-999c861d91b8)
+![1](https://github.com/manish-nepal/vue3-select-option-searchable/assets/106729542/f3285e6b-5073-4bfd-8d79-f75c8ee47ea9)
+![2](https://github.com/manish-nepal/vue3-select-option-searchable/assets/106729542/33b781ab-17b2-4e3b-9ae8-7c77b9744507)
+![3](https://github.com/manish-nepal/vue3-select-option-searchable/assets/106729542/7356097a-fbee-4362-866b-c7067f4652c6)
+![4](https://github.com/manish-nepal/vue3-select-option-searchable/assets/106729542/139ad37a-4e0c-4b90-ab77-7367454a7b41)
 
 
 **Feature**
@@ -44,8 +41,8 @@ selected object or item on a variable like this **const selectedItem = ref({})**
 
 ```vue
 
-import SelectOption from 'vue3-select-option-searchablee'
-import "vue3-select-option-searchablee/dist/style.css"
+import SelectOption from 'vue3-select-option-searchable'
+import "vue3-select-option-searchable/dist/style.css"
 
 createApp(App).use(SelectOption).mount('#app')
 
@@ -55,8 +52,8 @@ createApp(App).use(SelectOption).mount('#app')
 
 ```vue
 
-import SelectOption from 'vue3-select-option-searchablee'
-import "vue3-select-option-searchablee/dist/style.css"
+import SelectOption from 'vue3-select-option-searchable'
+import "vue3-select-option-searchable/dist/style.css"
 
 const app = createApp(App);
 
