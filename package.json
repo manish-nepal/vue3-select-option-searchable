@@ -27,12 +27,12 @@
   "license": "ISC",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/manish-nepal/vue3-select-option-search"
+    "url": "git+https://github.com/manish-nepal/vue3-select-option-searchable"
   },
   "bugs": {
-    "url": "https://github.com/manish-nepal/vue3-select-option-search/issues"
+    "url": "https://github.com/manish-nepal/vue3-select-option-searchable/issues"
   },
-  "homepage": "https://github.com/manish-nepal/vue3-select-option-search#readme",
+  "homepage": "https://github.com/manish-nepal/vue3-select-option-searchable#readme",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
