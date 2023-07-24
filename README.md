@@ -32,7 +32,7 @@ Using this package, you can display an array of object on select option list, se
 selected object or item on a variable like this **const selectedItem = ref({})** or **const selectedItem = reactive({})**, just pass **selectedItem** to **v-model** like **v-model="selectedItem"**
 
 ***displayName*** - Pass a prop as string to displayName for example  **displayName="'name'"**, in this case name should be a field inside a object you passed on data array, like as 
-**data = [{id: 1, name: abc, age: 50}, {id: 2, name: def, age: 25}]**, So now on this object, except for _id_, _name_ and _age_, if you mis-spell or pass a string which is not a field of a object on array, the package will not render anyhing on a modal list.
+**data = [{id: 1, name: abc, age: 50}, {id: 2, name: def, age: 25}]**, So now on this object, except for _id_, _name_ and _age_, if you mis-spell or pass a string which is not a key(field) of an object on array, the package will not render anyhing on option list.
 
 
 ### Usage
