@@ -24,7 +24,7 @@
     "clearable"
   ],
   "author": "Manish Nepal",
-  "license": "ISC",
+  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/manish-nepal/vue3-select-option-searchable"
