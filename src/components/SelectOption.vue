@@ -5,7 +5,7 @@
         <div style="position: relative;">
             <div class="input-container" :style="inputBorderColor">
                 <input type="text" ref="inputRef" :placeholder="placeHolder ? placeHolder : 'Select Item'"
-                    v-model="selectedItem.name" @input="handleSearch" @click="handleInput" @keydown.enter="handleEnter"
+                    v-model="selectedItem[selectOptionProps.displayName]" @input="handleSearch" @click="handleInput" @keydown.enter="handleEnter"
                     @keydown.escape="handleEscape" @keydown.arrow-up.prevent="moveHighlight('up')"
                     @keydown.arrow-down.prevent="moveHighlight('down')" @blur="handleBlur" style="
                         padding: 8px;
@@ -14,7 +14,7 @@
                         border: none;
                         width: inherit;
                         " :style="inputOutlineColor">
-                <div class="clear-icon" v-if="selectedItem.name" @click="clearSearch">
+                <div class="clear-icon" v-if="selectedItem[selectOptionProps.displayName]" @click="clearSearch">
                     <span class="material-symbols-outlined">close</span>
                 </div>
                 <div @click="handleInput" class="chevron-icon">
