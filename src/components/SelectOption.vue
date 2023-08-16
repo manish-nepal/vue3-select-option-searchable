@@ -3,17 +3,19 @@
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
     <div :style="selectDropdownStyles">
         <div style="position: relative;">
-            <div class="input-container" :style="inputBorderColor">
+            <div v-if="data.length" class="input-container" :style="inputBorderColor">
                 <input type="text" ref="inputRef" :placeholder="placeHolder ? placeHolder : 'Select Item'"
                     v-model="selectedItem[selectOptionProps.displayName]" @input="handleSearch" @click="handleInput" @keydown.enter="handleEnter"
                     @keydown.escape="handleEscape" @keydown.arrow-up.prevent="moveHighlight('up')"
-                    @keydown.arrow-down.prevent="moveHighlight('down')" @blur="handleBlur" style="
+                    @keydown.arrow-down.prevent="moveHighlight('down')" @blur="handleBlur"
+                    style="
                         padding: 8px;
                         padding-right: 16px;
                         outline-color: #86efac;
                         border: none;
                         width: inherit;
-                        " :style="inputOutlineColor">
+                    "
+                    :style="inputOutlineColor">
                 <div class="clear-icon" v-if="selectedItem[selectOptionProps.displayName]" @click="clearSearch">
                     <span class="material-symbols-outlined">close</span>
                 </div>
@@ -21,13 +23,39 @@
                     <span class="material-symbols-outlined">expand_more</span>
                 </div>
             </div>
+            <div v-else class="input-container" :style="inputBorderColor">
+                <input @click="handleInput" type="text" ref=inputRef class="input-container" :placeholder="placeHolder ? placeHolder : 'Select Item'"
+                    @blur="handleBlur"
+                    style="
+                        padding: 8px;
+                        padding-right: 16px;
+                        outline-color: #86efac;
+                        border: none;
+                        width: inherit;
+                    "
+                    :style="inputOutlineColor">
+                <div @click="handleInput" class="chevron-icon">
+                    <span class="material-symbols-outlined">expand_more</span>
+                </div>
+            </div>
         </div>
-        <ul v-show="isOpen" class="shadow-2xl list-container" :style="selectDropdownStyles">
+        <ul v-if="isOpen && data.length" class="shadow-2xl list-container" :style="selectDropdownStyles">
             <li v-for="(item, index) in filteredData" :key="index" @mousedown.prevent.stop @click="handleSelect(item)"
                 @mouseover="highlightedIndex = index" class="list-item"
                 :class="{ 'highlighted-list-item': highlightedIndex === index }">
                 {{ item[selectOptionProps.displayName] }}
             </li>
+        </ul>
+        <ul v-else class="shadow-2xl list-container" :style="selectDropdownEmptyStyles">
+            <svg v-if="isOpen && !data.length" class="loading-indicator animate-spin" fill="none"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg">
+                <circle class="opacity-25" cx="12" cy="12" r="0" stroke="currentColor" stroke-width="4"></circle>
+                <path class="loading-indicator-path"
+                    d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+                    fill="currentColor">
+                </path>
+            </svg>
         </ul>
     </div>
 </template>
@@ -76,6 +104,15 @@ const selectDropdownStyles = computed(() => {
         width: selectOptionProps.width ? `${selectOptionProps.width}px` : '',
         backgroundColor: 'white',
         'max-height': !!selectOptionProps.maxHeight ? `${selectOptionProps.maxHeight}px` : '250px'
+    }
+});
+
+const selectDropdownEmptyStyles = computed(() => {
+    return {
+        width: selectOptionProps.width ? `${selectOptionProps.width}px` : '',
+        backgroundColor: 'white',
+        display: 'flex',
+        'justify-content': 'center',
     }
 });
 
@@ -268,5 +305,24 @@ ul {
 
 .clear-icon:hover {
     color: rgb(184, 182, 182);
+}
+
+.loading-indicator {
+    width: 40px;
+    height: 40px;
+    margin: 32px;
+}
+
+.loading-indicator-path {
+    opacity: 0.25;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+.animate-spin {
+    animation: spin 1s linear infinite;
 }
 </style>
